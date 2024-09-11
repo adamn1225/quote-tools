@@ -1,0 +1,286 @@
+{
+    "large-excavator": [
+        {
+            "Title": "Large Excavators 340 - TIER 4 / STAGE V",
+            "Weight": "Operating Weight 83100 lb 37700 kg",
+            "Dimensions": [
+                "Boom Reach 6.5 m (21'4\")",
+                "Reach 6.5 m (21'4\") Stick Reach 3.9 m (12'10\")",
+                "Reach 3.9 m (12'10\") Bucket HD 2.36 m³ (3.08 yd³)",
+                "HD 2.36 m³ (3.08 yd³) Shipping Height - Top of Cab 10.5 ft",
+                "3180 mm Handrail Height 10.5 ft",
+                "3180 mm Shipping Length 36.8 ft",
+                "11180 mm Tail Swing Radius 11.7 ft",
+                "3530 mm Counterweight Clearance 4.2 ft",
+                "1260 mm Ground Clearance 1.8 ft",
+                "510 mm Track Length 16.6 ft",
+                "5030 mm Track Length to Center of Rollers 13.3 ft",
+                "4040 mm Track Gauge 9 ft",
+                "2740 mm Transport Width - 850 mm (33”) Shoes 11.9 ft",
+                "3590 mm"
+            ]
+        },
+        {
+            "Title": "Large Excavators 350 - TIER 4 / STAGE V",
+            "Weight": "Operating Weight 105100 lb 46000 kg",
+            "Dimensions": [
+                "Boom Reach 6.9 m (22'8\")",
+                "Reach 6.9 m (22'8\") Stick Reach 3.9 m (12'10\")",
+                "Reach 3.9 m (12'10\") Bucket GDC 3.08 m³ (4.03 yd³)",
+                "GDC 3.08 m³ (4.03 yd³) Shipping Height - Top of Cab 10.8 ft",
+                "3260 mm Handrail Height 11.2 ft",
+                "3400 mm Shipping Length 39 ft",
+                "11800 mm Tail Swing Radius 12.4 ft",
+                "3760 mm Counterweight Clearance 4.5 ft",
+                "1340 mm Ground Clearance 1.8 ft",
+                "520 mm Track Length 17.9 ft",
+                "5400 mm Track Length to Center of Rollers 14.4 ft",
+                "4360 mm Track Gauge 9 ft",
+                "2740 mm Transport Width - 600 mm (24”) Shoes 10.11 ft",
+                "3340 mm"
+            ]
+        },
+        {
+            "Title": "Large Excavators 352",
+            "Weight": "Operating Weight 107800 lb 48900 kg",
+            "Dimensions": [
+                "Boom Reach 6.9 m (22'8\")",
+                "Reach 6.9 m (22'8\") Stick Reach 3.9 m (12'10\")",
+                "Reach 3.9 m (12'10\") Bucket HD 3.3 m³ (4.32 yd³)",
+                "HD 3.3 m³ (4.32 yd³) Shipping Height - Top of Cab 10.7 ft",
+                "3230 mm Handrail Height 11.1 ft",
+                "3370 mm Shipping Length 39.1 ft",
+                "11900 mm Tail Swing Radius 12.4 ft",
+                "3760 mm Counterweight Clearance 4.2 ft",
+                "1280 mm Ground Clearance 1.7 ft",
+                "475 mm Track Length 17.7 ft",
+                "5370 mm Track Length to Center of Rollers 14.4 ft",
+                "4360 mm Track Gauge 9 ft",
+                "2740 mm Transport Width 11.11 ft",
+                "3640 mm"
+            ]
+        },
+        {
+            "Title": "Large Excavators 374 - TIER 4 / STAGE V",
+            "Weight": "Operating Weight 162900 lb 73890 kg Note Long Variable Gauge undercarriage, Reach boom, R4.67VB (15'4\") stick, SD 3.3 m³ (4.32 yd³) bucket, 900 mm (35\") HD double grouser shoes and removal type counterweight. Long Variable Gauge undercarriage, Reach boom, R4.67VB (15'4\") stick, SD 3.3 m³ (4.32 yd³) bucket, 900 mm (35\") HD double grouser shoes and removal type counterweight.",
+            "Dimensions": [
+                "Boom Reach 7.8m (25'7\")",
+                "Reach 7.8m (25'7\") Stick R3.6m (11'10\")",
+                "R3.6m (11'10\") Bucket SD 3.3 m³ (4.32 yd³)",
+                "SD 3.3 m³ (4.32 yd³) Shipping Height - Top of Cab 11.8 ft",
+                "3559 mm Handrail Height 13 ft",
+                "3982 mm Shipping Length 44.9 ft",
+                "13652 mm Tail Swing Radius 13.8 ft",
+                "4171 mm Counterweight Clearance 4.1 ft",
+                "1494 mm Ground Clearance 2.6 ft",
+                "782 mm Track Length 19.3 ft",
+                "5873 mm Track Length to Center of Rollers 15.5 ft",
+                "4705 mm Track Gauge 11.2 ft",
+                "3410 mm Transport Width 11.1 ft",
+                "3400 mm Note Track gauge undercarriage extended with 650 mm (26\") shoes; transport width undercarriage retracted with 650 mm (26\") shoes and no steps",
+                "Track gauge undercarriage extended with 650 mm (26\") shoes; transport width undercarriage retracted with 650 mm (26\") shoes and no steps"
+            ]
+        },
+        {
+            "Title": "Large Excavators 395 - TIER 4 / STAGE V",
+            "Weight": "Operating Weight 207400 lb 94000 kg Note (1) Long Variable Gauge undercarriage, GP boom, R4.4HB2 (14'5\") stick, SD 5.2 m³ (6.8 yd³) bucket, 900 mm (35\") double grouser shoes and counterweight with removal device. Long Variable Gauge undercarriage, GP boom, R4.4HB2 (14'5\") stick, SD 5.2 m³ (6.8 yd³) bucket, 900 mm (35\") double grouser shoes and counterweight with removal device.",
+            "Dimensions": [
+                "Boom GP 8.4m (25'7\")",
+                "GP 8.4m (25'7\") Stick R4.4m (14'5\")",
+                "R4.4m (14'5\") Bucket SD 5.2m³ (6.8 yd³)",
+                "SD 5.2m³ (6.8 yd³) Shipping Height - Top of Cab 12 ft",
+                "3670 mm Handrail Height 12.4 ft",
+                "3750 mm Shipping Length 49.6 ft",
+                "15090 mm Tail Swing Radius 15.11 ft",
+                "4840 mm Counterweight Clearance 5.5 ft",
+                "1640 mm Ground Clearance 2.9 ft",
+                "830 mm Track Length 20.1 ft",
+                "6350 mm Track Length to Center of Rollers 16.1 ft",
+                "5120 mm Track Gauge 11.6 ft",
+                "3510 mm Transport Width 12.9 ft",
+                "3880 mm Note Track gauge undercarriage extended with 900 mm (35\") shoes; transport width undercarriage retracted with 900 mm (35\") shoes and no steps",
+                "Track gauge undercarriage extended with 900 mm (35\") shoes; transport width undercarriage retracted with 900 mm (35\") shoes and no steps"
+            ]
+        }
+    ],
+    "small-excavator": [
+        {
+            "Title": "Small Excavators 313",
+            "weight": "Operating Weight 30400 lb 13800 kg",
+            "dimensions": {}
+        },
+        {
+            "Title": "Small Excavators 315 GC",
+            "weight": "Operating Weight 34000 lb 15400 kg",
+            "dimensions": {}
+        },
+        {
+            "Title": "Small Excavators 315",
+            "weight": "Operating Weight 34000 lb 15400 kg",
+            "dimensions": {}
+        },
+        {
+            "Title": "Small Excavators 317",
+            "weight": "Operating Weight 40200 lb 18200 kg",
+            "dimensions": {}
+        },
+        {
+            "Title": "Small Excavators 317 GC",
+            "weight": "Operating Weight 38000 lb 17200 kg",
+            "dimensions": {}
+        }
+    ],
+    "mini-excavator": [
+        {
+            "Title": "Mini Excavators 301.5",
+            "weight": "Height 8.9 in 225 mm Note *Expanded – 1300 mm (51 in) *Expanded – 1300 mm (51 in) Width* 39 in 990 mm",
+            "dimensions": {}
+        },
+        {
+            "Title": "Mini Excavators 301.7 CR",
+            "weight": "Height 8.9 in 225 mm Note *Expanded – 1300 mm (51 in) *Expanded – 1300 mm (51 in) Width* 39 in 990 mm",
+            "dimensions": {}
+        },
+        {
+            "Title": "Mini Excavators 301.8",
+            "weight": "Height 8.9 in 225 mm Width* 39 in 990 mm Note *Expanded – 1300 mm (51 in) *Expanded – 1300 mm (51 in)",
+            "dimensions": {}
+        },
+        {
+            "Title": "Mini Excavators 302 CR",
+            "weight": "Height 8.9 in 225 mm Width* 42.9 in 1090 mm Note *Expanded – 1400 mm (55 in) *Expanded – 1400 mm (55 in)",
+            "dimensions": {}
+        },
+        {
+            "Title": "Mini Excavators 302.7 CR",
+            "weight": "Ground Pressure - Maximum Weight 4.2 psi 29 kPa Ground Pressure - Minimum Weight 3.5 psi 24.2 kPa Travel Speed - Low 1.6 mile/h 2.6 km/h Gradeability - Maximum 30 degrees 30 degrees Maximum Traction Force - High Speed 3507 lbf 15.6 kN Travel Speed - High 2.8 mile/h 4.5 km/h Maximum Traction Force - Low Speed 6025 lbf 26.8 kN",
+            "dimensions": {}
+        },
+        {
+            "Title": "Mini Excavators 303 CR",
+            "weight": "Height 13.8 in 350 mm Width 61 in 1550 mm",
+            "dimensions": {}
+        },
+        {
+            "Title": "Mini Excavators 303.5 CR",
+            "weight": "Height 13.8 in 350 mm Width 70.1 in 1780 mm",
+            "dimensions": {}
+        },
+        {
+            "Title": "Mini Excavators 304",
+            "weight": "Ground Pressure - Minimum Weight 4.2 psi 28.7 kPa Maximum Traction Force - Low Speed 7329 lbf 32.6 kN Travel Speed - Low 2.2 mile/h 3.5 km/h Ground Pressure - Maximum Weight 4.9 psi 33.8 kPa Travel Speed - High 3.2 mile/h 5.2 km/h Maximum Traction Force - High Speed 4271 lbf 19 kN Gradeability - Maximum 30 degrees 30 degrees",
+            "dimensions": {}
+        },
+        {
+            "Title": "Mini Excavators 305 CR - TIER 4 / STAGE V",
+            "weight": "Boom Swing - Left 72 Degrees 72 Degrees Machine Swing Speed 9 r/min 9 r/min Boom Swing - Right 50 Degrees 50 Degrees",
+            "dimensions": {}
+        },
+        {
+            "Title": "Mini Excavators 306 CR",
+            "weight": "Ground Pressure - Minimum Weight 5.1 psi 35.4 kPa Ground Pressure - Maximum Weight 5.7 psi 39.1 kPa Gradeability - Maximum 30 degrees 30 degrees Maximum Traction Force - High Speed 6969 lbf 31 kN Maximum Traction Force - Low Speed 12589 lbf 56 kN Travel Speed - High 3.1 mile/h 5 km/h Travel Speed - Low 1.7 mile/h 2.8 km/h",
+            "dimensions": {}
+        },
+        {
+            "Title": "Mini Excavators 307.5 - TIER 4 / STAGE V",
+            "weight": "Long Stick 181 lb 82 kg Counterweight 552 lb 250 kg Steel Tracks with Pads 628 lb 285 kg",
+            "dimensions": {}
+        },
+        {
+            "Title": "Mini Excavators 308 CR",
+            "weight": "Maximum Traction Force - High Speed 6250 lb 27.8 kN Ground Pressure - Maximum Weight 5.8 psi 39.8 kPa Ground Pressure - Minimum Weight 5.4 psi 36.9 kPa Travel Speed - High 3.2 mile/h 5.1 km/h Travel Speed - Low 1.9 mile/h 3.1 km/h Maximum Traction Force - Low Speed 15175 lb 67.5 kN Gradeability - Maximum 30 degrees 30 degrees",
+            "dimensions": {}
+        },
+        {
+            "Title": "Mini Excavators 308 CR VAB",
+            "weight": "Maximum Traction Force - High Speed 6250 lbf 27.8 kN Travel Speed - Low 1.9 mile/h 3.1 km/h Ground Pressure - Maximum Weight 5.9 psi 40.6 kPa Travel Speed - High 3.2 mile/h 5.1 km/h Gradeability - Maximum 30 degrees 30 degrees Ground Pressure - Minimum Weight 5.5 psi 37.9 kPa Maximum Traction Force - Low Speed 15175 lbf 67.5 kN",
+            "dimensions": {}
+        }
+    ],
+    "med-excavator": [
+        {
+            "Title": "Medium Excavators 325 - TIER 4 / STAGE V",
+            "weight": "Operating Weight 62800 lb 28500 kg Note Long undercarriage, Reach boom, R2.9B1 (9'6\") stick, Heavy Duty (HD) 1.19 m³ (1.56 yd³) bucket, 790 mm (31\") HD triple grouser shoes and 8300 kg (18,300 lb) counterweight. Long undercarriage, Reach boom, R2.9B1 (9'6\") stick, Heavy Duty (HD) 1.19 m³ (1.56 yd³) bucket, 790 mm (31\") HD triple grouser shoes and 8300 kg (18,300 lb) counterweight.",
+            "dimensions": {}
+        },
+        {
+            "Title": "Medium Excavators 326 - TIER 4 / STAGE V",
+            "weight": "Operating Weight 56400 lb 25600 kg Note Long undercarriage, Reach boom, R2.95 m (9'7\") stick, 1.54 m³ (2.01 yd³) Heavy Duty (HD) bucket, 600 mm (24\") triple grouser shoes and 4600 kg (10,140 lb) counterweight. Long undercarriage, Reach boom, R2.95 m (9'7\") stick, 1.54 m³ (2.01 yd³) Heavy Duty (HD) bucket, 600 mm (24\") triple grouser shoes and 4600 kg (10,140 lb) counterweight.",
+            "dimensions": {}
+        },
+        {
+            "Title": "Medium Excavators 330 GC - TIER 4 / STAGE V",
+            "weight": "Operating Weight 68100 lb 30900 kg Note Long undercarriage, Reach boom, R3.2 m (10'6\") stick, Heavy Duty (HD) 1.54 m³ (2.01 yd³) bucket, 800 mm (31\") triple grouser shoes and 6700 kg (14,770 lb) counterweight. Long undercarriage, Reach boom, R3.2 m (10'6\") stick, Heavy Duty (HD) 1.54 m³ (2.01 yd³) bucket, 800 mm (31\") triple grouser shoes and 6700 kg (14,770 lb) counterweight.",
+            "dimensions": {}
+        },
+        {
+            "Title": "Medium Excavators 330 - TIER 4 / STAGE V",
+            "weight": "Operating Weight 69200 lb 31400 kg Note Long undercarriage, Reach boom, R3.2 m (10'6\") stick, Heavy Duty (HD) 1.76 m³ (2.30 yd³) bucket, 800 mm (31\") triple grouser shoes and 6700 kg (14,770 lb) counterweight. Long undercarriage, Reach boom, R3.2 m (10'6\") stick, Heavy Duty (HD) 1.76 m³ (2.30 yd³) bucket, 800 mm (31\") triple grouser shoes and 6700 kg (14,770 lb) counterweight.",
+            "dimensions": {}
+        },
+        {
+            "Title": "Medium Excavators 335 - TIER 4 / STAGE V",
+            "weight": "Operating Weight 77000 lb 34900 kg Note Long undercarriage Reach boom, R3.2 (10'6\") stick, Heavy Duty (HD) 1.54 m³ (2.01 yd³) bucket, 600 mm (24\") triple grouser shoes, 5000 kg (11,202 lb) counterweight and 3440 mm (11'3\") blade. Long undercarriage Reach boom, R3.2 (10'6\") stick, Heavy Duty (HD) 1.54 m³ (2.01 yd³) bucket, 600 mm (24\") triple grouser shoes, 5000 kg (11,202 lb) counterweight and 3440 mm (11'3\") blade.",
+            "dimensions": {}
+        }
+    ],
+    "demolition-excavator": [
+        {
+            "Title": "Demolition Excavators 340 STRAIGHT BOOM",
+            "weight": "Operating Weight 87800 lb 39800 kg Note (1) Long undercarriage, Straight boom, R3.9DB (12'10\") stick, GD 2.27 m³ (2.97 yd³) bucket, 700 mm (28\") triple grouser shoes, and 9 mt (19,800 lb) counterweight. Long undercarriage, Straight boom, R3.9DB (12'10\") stick, GD 2.27 m³ (2.97 yd³) bucket, 700 mm (28\") triple grouser shoes, and 9 mt (19,800 lb) counterweight.",
+            "dimensions": {}
+        },
+        {
+            "Title": "Demolition Excavators 352 STRAIGHT BOOM",
+            "weight": "Operating Weight 121000 lb 54900 kg Note (1) Variable Gauge undercarriage, Straight boom, Reach 3.9 m TB (12'10\") stick, HD 2.14 m³ (2.8 yd³) bucket, 600 mm (24\") triple grouser shoes and 11.35 mt (25,020 lb) removable counterweight. Variable Gauge undercarriage, Straight boom, Reach 3.9 m TB (12'10\") stick, HD 2.14 m³ (2.8 yd³) bucket, 600 mm (24\") triple grouser shoes and 11.35 mt (25,020 lb) removable counterweight. Note (2) Fixed Gauge undercarriage is available - see technical specifications document for configurations. Fixed Gauge undercarriage is available - see technical specifications document for configurations.",
+            "dimensions": {}
+        },
+        {
+            "Title": "Demolition Excavators 340 UHD",
+            "weight": "Swing Speed 8 r/min 8 r/min Maximum Swing Torque 105000 ft·lbf 143 kN·m",
+            "dimensions": {}
+        },
+        {
+            "Title": "Demolition Excavators 352 UHD",
+            "weight": "Swing Speed 8.44 r/min 8.44 r/min Maximum Swing Torque 139000 ft·lbf 189 kN·m",
+            "dimensions": {}
+        }
+    ],
+    "wheel-excavator": [
+        {
+            "Title": "Wheel Excavators M314",
+            "weight": "Operating Weight Maximum 39683 lb 18000 kg Note (1) Typical configurations include medium stick, 2600 kg (5,732 lb) counterweight, full fuel tank, operator, quick coupler (210 kg/463 lb), bucket (500 kg/1,102 lb) and dual pneumatic tires. Typical configurations include medium stick, 2600 kg (5,732 lb) counterweight, full fuel tank, operator, quick coupler (210 kg/463 lb), bucket (500 kg/1,102 lb) and dual pneumatic tires. Operating Weight Minimum 33069 lb 15000 kg",
+            "dimensions": {}
+        },
+        {
+            "Title": "Wheel Excavators M315",
+            "weight": "Operating Weight Maximum 39680 lb 18000 kg Operating Weight Minimum 34610 lb 15700 kg",
+            "dimensions": {}
+        },
+        {
+            "Title": "Wheel Excavators M316",
+            "weight": "Operating Weight Maximum 36400 lb 16510 kg Note (1) Operating weight includes full fuel tank, operator, 10.00-20 tires, VA boom, 2500 mm (8' 2\") stick, 2600 kg (5,732 lb) counterweight, undercarriage, and 4 outriggers. Operating weight includes full fuel tank, operator, 10.00-20 tires, VA boom, 2500 mm (8' 2\") stick, 2600 kg (5,732 lb) counterweight, undercarriage, and 4 outriggers.",
+            "dimensions": {}
+        },
+        {
+            "Title": "Wheel Excavators M318",
+            "weight": "Cooling System 8.5 gal (US) 32 l Diesel Exhaust Fluid (DEF) 5.3 gal (US) 20 l Hydraulic System - Including Tank 68.7 gal (US) 260 l Hydraulic Tank 31.7 gal (US) 120 l Final Drive 0.7 gal (US) 2.5 l Fuel Tank 92.5 gal (US) 350 l",
+            "dimensions": {}
+        },
+        {
+            "Title": "Wheel Excavators M319",
+            "weight": "Operating Weight Maximum 46407 lb 21050 kg Operating Weight Minimum 41888 lb 19000 kg",
+            "dimensions": {}
+        },
+        {
+            "Title": "Wheel Excavators M320",
+            "weight": "Operating Weight Maximum 46740 lb 21200 kg Operating Weight Minimum 41450 lb 18800 kg",
+            "dimensions": {}
+        },
+        {
+            "Title": "Wheel Excavators M322",
+            "weight": "Operating Weight Maximum 52911 lb 24000 kg Operating Weight Minimum 44750 lb 20300 kg",
+            "dimensions": {}
+        }
+    ]
+}
