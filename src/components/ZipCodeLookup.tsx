@@ -86,18 +86,18 @@ const ZipCodeLookup: React.FC = () => {
                 <div className='flex flex-col gap-2'>
                     <h2 className='font-bold'>Origin ZIP Code Lookup</h2>
                     <Input type="text" id="origin" value={origin} onChange={(e) => setOrigin(e.target.value)} placeholder="Enter Origin ZIP Code" />
-                    <Button onClick={() => lookupZipCode('origin')}>Lookup Origin</Button>
+                    <Button className='dark-button' onClick={() => lookupZipCode('origin')}>Lookup Origin</Button>
                     <div dangerouslySetInnerHTML={{ __html: originInfo }}></div>
                 </div>
                 <div className='flex flex-col gap-2'>
                     <h2 className='font-bold'>Destination ZIP Code Lookup</h2>
                     <Input type="text" id="destination" value={destination} onChange={(e) => setDestination(e.target.value)} placeholder="Enter Destination ZIP Code" />
-                    <Button onClick={() => lookupZipCode('destination')}>Lookup Destination</Button>
+                    <Button className='dark-button' onClick={() => lookupZipCode('destination')}>Lookup Destination</Button>
                     <div dangerouslySetInnerHTML={{ __html: destinationInfo }}></div>
                 </div>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '75px' }}>
-                <Button onClick={calculateDistance}>Calculate Distance</Button>
+                <Button className='dark-button' onClick={calculateDistance}>Calculate Distance</Button>
                 <div dangerouslySetInnerHTML={{ __html: distanceInfo }}></div>
             </div>
         </div>

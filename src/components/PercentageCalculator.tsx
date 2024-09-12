@@ -32,7 +32,7 @@ const PercentageCalculator: React.FC = () => {
                 etc,<br /> (feel free to change)):</span></label><br />
             <Input type="number" id="percentage" value={percentage} onChange={(e) => setPercentage(e.target.value)} placeholder="Enter percentage" /><br />
 
-            <Button onClick={calculate}>Calculate</Button>
+            <Button className='dark-button' onClick={calculate}>Calculate</Button>
 
             <h2>New Total: ${result.toFixed(2)}</h2>
         </div>

@@ -27,7 +27,7 @@ const TonsToLbs: React.FC = () => {
             <Input type="number" id="tons" value={tons} onChange={(e) => setTons(e.target.value)} placeholder="Enter weight in tons" />
             
 
-            <Button onClick={convertTonsToLbs}>Convert to Pounds</Button>
+            <Button className='dark-button' onClick={convertTonsToLbs}>Convert to Pounds</Button>
 
             <h2 className='font-bold'>Weight in Pounds: {pounds.toFixed(2)}</h2>
         </div>

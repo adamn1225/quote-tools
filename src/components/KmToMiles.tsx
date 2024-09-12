@@ -25,7 +25,7 @@ const KmToMiles: React.FC = () => {
             <label style={{ fontSize: '16px', fontWeight: 600 }} htmlFor="kilometers">Kilometers:</label>
                 <Input type="text" id="kilometers" value={kilometers} onChange={(e) => setKilometers(e.target.value)} placeholder="Enter distance in kilometers" />
 
-            <Button onClick={convertKmToMiles}>Convert to Miles</Button>
+            <Button className='dark-button ' onClick={convertKmToMiles}>Convert to Miles</Button>
 
             <h2 className='font-bold'>Distance in Miles: {miles.toFixed(2)}</h2>
         </div>

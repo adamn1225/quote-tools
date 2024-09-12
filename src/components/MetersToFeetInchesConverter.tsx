@@ -27,7 +27,7 @@ const MetersToFeetInchesConverter: React.FC = () => {
             <label style={{ fontSize: '16px', fontWeight: 600 }} htmlFor="meters">Meters:</label>
             <Input type="number" id="meters" value={meters} onChange={(e) => setMeters(e.target.value)} placeholder="Enter length in meters" />
 
-            <Button onClick={convertMetersToFeetInches}>Convert to Feet and Inches</Button>
+            <Button className='dark-button' onClick={convertMetersToFeetInches}>Convert to Feet and Inches</Button>
 
             <h2 className='font-bold'>Feet and Inches: {feetInches}</h2>
         </div>

@@ -138,8 +138,8 @@ const DimensionSearch: React.FC = () => {
                 />
             </div>
             <div className="flex gap-4 mb-4 justify-center">
-                <Button onClick={handleSearch}>Search</Button>
-                <Button onClick={handleClearSearch} variant="outline">Clear</Button>
+                <Button className='dark-button hover:bg-gray-800' onClick={handleSearch}>Search</Button>
+                <Button className='dark-button' onClick={handleClearSearch} variant="outline">Clear</Button>
             </div>
             <ul className="flex flex-wrap justify-evenly gap-4">
                 {results.map((result, index) => (

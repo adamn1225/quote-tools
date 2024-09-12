@@ -28,7 +28,7 @@ const MmToFeetInchesConverter: React.FC = () => {
             <label style={{ fontSize: '16px', fontWeight: 600 }} htmlFor="millimeters">Millimeters:</label>
                 <Input type="number" id="millimeters" value={millimeters} onChange={(e) => setMillimeters(e.target.value)} placeholder="Enter length in millimeters" />
 
-            <Button onClick={convertMmToFeetInches}>Convert to Feet and Inches</Button>
+            <Button className='dark-button' onClick={convertMmToFeetInches}>Convert to Feet and Inches</Button>
 
             <h2 className='font-bold'>Feet & Inches: {feetInches}</h2>
         </div>

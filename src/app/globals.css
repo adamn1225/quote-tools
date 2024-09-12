@@ -57,3 +57,11 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.dark-button {
+  @apply bg-gray-950 text-white;
+}
+
+.dark-button:hover {
+  @apply bg-gray-900;
+}
