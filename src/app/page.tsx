@@ -9,7 +9,7 @@ export default function Home() {
       <div className="w-full pl-[53px]">
         <Aside />
         <div className='flex justify-center'>
-          Home Page
+          <DimensionSearch />
         </div>
       </div>
         <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
