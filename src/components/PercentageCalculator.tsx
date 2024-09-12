@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 const PercentageCalculator: React.FC = () => {
     const [principal, setPrincipal] = useState<number | string>('');
@@ -23,14 +25,14 @@ const PercentageCalculator: React.FC = () => {
         <div>
             <h2>Add percentage to principal</h2>
             <label style={{ fontSize: '16px', fontWeight: 600 }} htmlFor="principal">Principal Amount:</label><br />
-            <input type="number" id="principal" value={principal} onChange={(e) => setPrincipal(e.target.value)} placeholder="Enter principal amount" /><br /><br />
+            <Input type="number" id="principal" value={principal} onChange={(e) => setPrincipal(e.target.value)} placeholder="Enter principal amount" /><br /><br />
 
             <label style={{ fontSize: '16px', fontWeight: 600, textWrap: 'wrap' }} htmlFor="percentage">Percentage to Add <br /><span
                 style={{ fontWeight: 200, fontSize: '14px' }}>(3% by default<br /> for full cc charges, tariff, amwins,
                 etc,<br /> (feel free to change)):</span></label><br />
-            <input type="number" id="percentage" value={percentage} onChange={(e) => setPercentage(e.target.value)} placeholder="Enter percentage" /><br />
+            <Input type="number" id="percentage" value={percentage} onChange={(e) => setPercentage(e.target.value)} placeholder="Enter percentage" /><br />
 
-            <button onClick={calculate}>Calculate</button>
+            <Button onClick={calculate}>Calculate</Button>
 
             <h2>New Total: ${result.toFixed(2)}</h2>
         </div>

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import DimensionSearch from "@/components/DimensionSearch";
-import PercentageCalculator from '@/components/PercentageCalculator';
 import KmToMiles from '@/components/KmToMiles';
 import TonsToLbs from '@/components/TonsToLbs';
 import MetersToFeetInchesConverter from '@/components/MetersToFeetInchesConverter';
@@ -18,7 +17,7 @@ export default function Home() {
           <TonsToLbs />
           <MetersToFeetInchesConverter />
           <MmToFeetInchesConverter />
-          <PercentageCalculator />
+          
         </main>
       <div className="flex items-center justify-center w-full pt-4 border-t-2 border-slate-950">  <ZipCodeLookup /></div>
       </div>
