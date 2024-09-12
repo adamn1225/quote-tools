@@ -26,7 +26,7 @@ function Aside() {
                                 <Link href="/equipment-directory">
                                     <Button
                                         variant="ghost"
-                                        className="rounded-lg bg-muted flex items-center gap-2"
+                                        className="rounded-lg bg-muted flex items-center gap-2 bg-white"
                                         aria-label="Equipment Directory"
                                     >
                                         <FolderSearch2 className="size-5" />
@@ -44,7 +44,7 @@ function Aside() {
                                 <Link href="/tools">
                                     <Button
                                         variant="ghost"
-                                        className="rounded-lg flex items-center gap-2"
+                                        className="rounded-lg flex items-center gap-2 bg-white"
                                         aria-label="Tools"
                                     >
                                         <Calculator className="size-5" />
@@ -62,7 +62,7 @@ function Aside() {
                                 <Link href="/settings">
                                     <Button
                                         variant="ghost"
-                                        className="rounded-lg flex items-center gap-2"
+                                        className="rounded-lg flex items-center gap-2 bg-white"
                                         aria-label="Settings"
                                     >
                                         <Settings className="size-5" />
@@ -80,7 +80,7 @@ function Aside() {
                                 <Link href="/help">
                                     <Button
                                         variant="ghost"
-                                        className="rounded-lg flex items-center gap-2"
+                                        className="rounded-lg bg-white flex items-center gap-2"
                                         aria-label="Help"
                                     >
                                         <Bot className="size-5" />
