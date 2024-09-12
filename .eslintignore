@@ -1,0 +1,4 @@
+# .eslintignore
+src/components/MmToFeetInchesConverter.tsx
+src/components/TonsToLbs.tsx
+src/components/ZipCodeLookup.tsx

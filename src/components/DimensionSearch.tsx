@@ -55,7 +55,6 @@ const DimensionSearch: React.FC = () => {
         "Kawasaki",
         "Liebherr",
         "Sany",
-
     ];
 
     useEffect(() => {

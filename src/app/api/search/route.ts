@@ -1,4 +1,3 @@
-// src/app/api/search/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import path from 'path';
 import { promises as fs } from 'fs';
@@ -20,10 +19,9 @@ interface ExcavatorData {
 }
 
 export async function GET(req: NextRequest) {
-    try {
-        const { searchParams } = new URL(req.url);
-        const query = searchParams.get('query') || '';
+    const query = req.nextUrl.searchParams.get('query') || '';
 
+    try {
         // Log the query
         console.log('Query:', query);
 
