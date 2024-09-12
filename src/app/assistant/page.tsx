@@ -38,7 +38,7 @@ import {
 } from "@/components/ui/tooltip"
 import Aside from '@/components/Aside';
 
-function Assistant() {
+const Assistant: React.FC = () => {
     return (
         <TooltipProvider>
             <div className="flex gap-4">
