@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import DimensionSearch from "@/components/DimensionSearch";
 import Aside from '@/components/Aside';
