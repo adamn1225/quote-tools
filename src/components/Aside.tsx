@@ -78,7 +78,7 @@ function Aside() {
 
                         <Tooltip>
                             <TooltipTrigger asChild>
-                                <Link href="/help">
+                                <Link href="/assistant">
                                     <Button
                                         variant="ghost"
                                         className="rounded-lg h-12 bg-white justify-start w-full flex items-center gap-1"
