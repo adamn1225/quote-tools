@@ -3,7 +3,7 @@ import React from 'react'
 import DimensionSearch from "@/components/DimensionSearch";
 import Aside from '@/components/Aside';
 
-export default function EquipmentDirectory() {
+const EquipmentDirectory: React.FC = () => {
 
     return (
         <div className="grid grid-rows-2 h-1/2 justify-items-center items-start w-full pl-[53px]">
@@ -14,3 +14,5 @@ export default function EquipmentDirectory() {
         </div>
     )
 };
+
+export default EquipmentDirectory;
