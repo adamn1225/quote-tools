@@ -98,7 +98,7 @@ const DimensionSearch: React.FC = () => {
     };
 
     return (
-        <div className="p-4 flex flex-col justify-center">
+        <div className="p-4 flex flex-col justify-center items-center">
             <h1 className="text-2xl font-bold mb-4 text-center">Equipment Dimension Search</h1>
             <div className='flex gap-4'>
                 <DropdownMenu>
@@ -141,7 +141,7 @@ const DimensionSearch: React.FC = () => {
                 <Button className='dark-button hover:bg-gray-800' onClick={handleSearch}>Search</Button>
                 <Button className='dark-button' onClick={handleClearSearch} variant="outline">Clear</Button>
             </div>
-            <ul className="flex flex-wrap justify-evenly gap-4">
+            <ul className="flex flex-wrap justify-evenly gap-4 w-2/3">
                 {results.map((result, index) => (
                     <div key={index} className='flex flex-col text-center justify-evenly items-center border p-4 max-w-[300px] min-w-[300px] h-auto'>
                         <div className='grid grid-rows-2 justify-items-start'>

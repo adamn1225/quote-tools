@@ -8,7 +8,7 @@ export default function Home() {
 <div>
       <div className="w-full pl-[53px]">
         <Aside />
-        <div className='flex justify-center'>
+        <div className='absolute top-24 flex justify-center w-full'>
           <DimensionSearch />
         </div>
       </div>

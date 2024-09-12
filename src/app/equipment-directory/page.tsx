@@ -6,9 +6,9 @@ import Aside from '@/components/Aside';
 const EquipmentDirectory: React.FC = () => {
 
     return (
-        <div className="grid grid-rows-2 h-1/2 justify-items-center items-start w-full pl-[53px]">
+        <div className="grid grid-rows-2 h-full justify-items-center items-start w-full pl-[53px]">
             <Aside />
-            <div className='flex justify-start align-top items-start gap-24'>
+            <div className='absolute top-24'>
                 <DimensionSearch />
                 </div>
         </div>

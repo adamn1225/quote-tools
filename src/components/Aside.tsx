@@ -8,7 +8,7 @@ import {
     TooltipProvider,
 } from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
-import { Bolt, Settings, Bot, FolderSearch2, Calculator, LucideTruck } from "lucide-react";
+import { Bolt, Settings, NotebookText, Bot, FolderSearch2, Wrench, UserRound } from "lucide-react";
 
 function Aside() {
     return (
@@ -48,8 +48,8 @@ function Aside() {
                                         className="rounded-lg flex justify-start items-center w-full gap-2 bg-white"
                                         aria-label="Tools"
                                     >
-                                        <Calculator className="size-5" />
-                                        <span>TOOLS</span>
+                                        <Wrench className="size-5" />
+                                        <span>TOOLS / CALCULATORS</span>
                                     </Button>
                                 </Link>
                             </TooltipTrigger>
@@ -66,13 +66,13 @@ function Aside() {
                                         className="rounded-lg h-12 flex justify-start w-full items-center bg-white gap-1"
                                         aria-label="Settings"
                                     >
-                                        <Settings className="size-5" />
-                                        <span className='text-xs text-justify'>SETTINGS<br />(coming soon)</span>
+                                        <NotebookText className="size-5" />
+                                        <span className='text-xs text-justify'>DOT REGULATIONS BY STATE<br />(coming soon)</span>
                                     </Button>
                                 </Link>
                             </TooltipTrigger>
                             <TooltipContent side="right" sideOffset={7}>
-                                Settings
+                                DOT Regulations
                             </TooltipContent>
                         </Tooltip>
 
@@ -91,6 +91,60 @@ function Aside() {
                             </TooltipTrigger>
                             <TooltipContent side="right" sideOffset={7}>
                                 Help
+                            </TooltipContent>
+                        </Tooltip>
+
+                        <Tooltip>
+                            <TooltipTrigger asChild>
+                                <Link href="/settings">
+                                    <Button
+                                        variant="ghost"
+                                        className="rounded-lg h-12 flex justify-start w-full items-center bg-white gap-1"
+                                        aria-label="Settings"
+                                    >
+                                        <NotebookText className="size-5" />
+                                        <span className='text-xs text-justify'>CARRIER SEARCH<br />(coming soon)</span>
+                                    </Button>
+                                </Link>
+                            </TooltipTrigger>
+                            <TooltipContent side="right" sideOffset={7}>
+                                Carrier Search
+                            </TooltipContent>
+                        </Tooltip>
+                    </nav>
+                    <nav className="mt-auto grid gap-1 p-2">
+                        <Tooltip>
+                            <TooltipTrigger asChild>
+                                <Link href="/settings">
+                                    <Button
+                                        variant="ghost"
+                                        className="rounded-lg h-12 flex justify-start w-full items-center bg-white gap-1"
+                                        aria-label="Settings"
+                                    >
+                                        <UserRound className="size-5" />
+                                        <span className='text-xs text-justify'>ACCOUNT<br />(coming soon)</span>
+                                    </Button>
+                                </Link>
+                            </TooltipTrigger>
+                            <TooltipContent side="right" sideOffset={7}>
+                                Account
+                            </TooltipContent>
+                        </Tooltip>
+                        <Tooltip>
+                            <TooltipTrigger asChild>
+                                <Link href="/settings">
+                                    <Button
+                                        variant="ghost"
+                                        className="rounded-lg h-12 flex justify-start w-full items-center bg-white gap-1"
+                                        aria-label="Settings"
+                                    >
+                                        <Settings className="size-5" />
+                                        <span className='text-xs text-justify'>SETTINGS<br />(coming soon)</span>
+                                    </Button>
+                                </Link>
+                            </TooltipTrigger>
+                            <TooltipContent side="right" sideOffset={7}>
+                                Settings
                             </TooltipContent>
                         </Tooltip>
                     </nav>
