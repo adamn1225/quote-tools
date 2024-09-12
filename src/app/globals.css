@@ -58,6 +58,10 @@ body {
   }
 }
 
+p, h1, h2, h3, h4, h5, h6, a, li, span, button, div, input, textarea {
+  @apply font-mono;
+}
+
 .dark-button {
   @apply bg-gray-950 text-white;
 }

@@ -15,9 +15,10 @@ function Aside() {
         <TooltipProvider>
             <div className="pl-[200px] bg-gray-950 z-50">
                 <aside className="inset-y fixed left-0 z-50 bg-gray-950 flex h-full flex-col border-r w-[260px]">
-                    <div className="border-b p-2">
+                    <div className="border-b p-2 w-full flex justify-center items-center ">
                         <Button aria-label="Home">
-                            <Bolt className="size-8 bg-white text-white fill-foreground" />
+                            <Bolt className="size-8 bg-white fill-foreground" />
+                            <h2 className='font-bold pl-4 text-xl font-mono'>HEAVY TOOLS</h2>
                         </Button>
                     </div>
                     <nav className="grid gap-1 justify-center pt-8">
@@ -26,7 +27,7 @@ function Aside() {
                                 <Link href="/equipment-directory">
                                     <Button
                                         variant="ghost"
-                                        className="rounded-lg bg-muted flex items-center gap-2 bg-white"
+                                        className="rounded-lg bg-muted flex justify-start items-center w-full gap-2 bg-white"
                                         aria-label="Equipment Directory"
                                     >
                                         <FolderSearch2 className="size-5" />
@@ -44,7 +45,7 @@ function Aside() {
                                 <Link href="/tools">
                                     <Button
                                         variant="ghost"
-                                        className="rounded-lg flex items-center gap-2 bg-white"
+                                        className="rounded-lg flex justify-start items-start w-full gap-2 bg-white"
                                         aria-label="Tools"
                                     >
                                         <Calculator className="size-5" />
@@ -62,7 +63,7 @@ function Aside() {
                                 <Link href="/settings">
                                     <Button
                                         variant="ghost"
-                                        className="rounded-lg flex items-center gap-2 bg-white"
+                                        className="rounded-lg flex justify-start w-full items-center gap-2 bg-white"
                                         aria-label="Settings"
                                     >
                                         <Settings className="size-5" />
@@ -80,7 +81,7 @@ function Aside() {
                                 <Link href="/help">
                                     <Button
                                         variant="ghost"
-                                        className="rounded-lg bg-white flex items-center gap-2"
+                                        className="rounded-lg bg-white justify-start w-full flex items-center gap-2"
                                         aria-label="Help"
                                     >
                                         <Bot className="size-5" />
