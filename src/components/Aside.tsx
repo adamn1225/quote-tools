@@ -8,7 +8,7 @@ import {
     TooltipProvider,
 } from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
-import { Bolt, Settings, NotebookText, Bot, FolderSearch2, Wrench, UserRound } from "lucide-react";
+import { Bolt, Settings, NotebookText, Bot, FolderSearch2, Wrench, UserRound, Landmark } from "lucide-react";
 
 function Aside() {
     return (
@@ -90,7 +90,7 @@ function Aside() {
                                 </Link>
                             </TooltipTrigger>
                             <TooltipContent side="right" sideOffset={7}>
-                                Help
+                                Broker Virtual Assistant
                             </TooltipContent>
                         </Tooltip>
 
@@ -109,6 +109,23 @@ function Aside() {
                             </TooltipTrigger>
                             <TooltipContent side="right" sideOffset={7}>
                                 Carrier Search
+                            </TooltipContent>
+                        </Tooltip>
+                        <Tooltip>
+                            <TooltipTrigger asChild>
+                                <Link href="/settings">
+                                    <Button
+                                        variant="ghost"
+                                        className="rounded-lg h-12 flex justify-start w-full items-center bg-white gap-1"
+                                        aria-label="Settings"
+                                    >
+                                        <Landmark className="size-5" />
+                                        <span className='text-xs text-justify'>EQUIPMENT VALUE GUIDE<br />(coming soon)</span>
+                                    </Button>
+                                </Link>
+                            </TooltipTrigger>
+                            <TooltipContent side="right" sideOffset={7}>
+                                Equipment Value Guide
                             </TooltipContent>
                         </Tooltip>
                     </nav>
