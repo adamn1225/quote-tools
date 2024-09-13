@@ -80,13 +80,13 @@ const Assistant: React.FC = () => {
                                                         <Rabbit className="size-5" />
                                                         <div className="grid gap-0.5">
                                                             <p>
-                                                                Neural{" "}
+                                                                Logi - {" "}
                                                                 <span className="font-medium text-foreground">
-                                                                    Genesis
+                                                                    Your Logistics Management Assistant/Expert
                                                                 </span>
                                                             </p>
                                                             <p className="text-xs" data-description>
-                                                                Our fastest model for general use cases.
+                                                                Ask Logi "What are the permits required for a Cat D8T from TX to CA?"
                                                             </p>
                                                         </div>
                                                     </div>
@@ -96,13 +96,13 @@ const Assistant: React.FC = () => {
                                                         <Bird className="size-5" />
                                                         <div className="grid gap-0.5">
                                                             <p>
-                                                                Neural{" "}
+                                                                Markely - {" "}
                                                                 <span className="font-medium text-foreground">
-                                                                    Explorer
+                                                                    Your Logistics Marketing Assistant/Expert
                                                                 </span>
                                                             </p>
                                                             <p className="text-xs" data-description>
-                                                                Performance and speed for efficiency.
+                                                                Ask Logi "Can you generate a follow up email to these 5 leads?"
                                                             </p>
                                                         </div>
                                                     </div>
@@ -112,13 +112,13 @@ const Assistant: React.FC = () => {
                                                         <Turtle className="size-5" />
                                                         <div className="grid gap-0.5">
                                                             <p>
-                                                                Neural{" "}
+                                                                Qauly - {" "}
                                                                 <span className="font-medium text-foreground">
-                                                                    Quantum
+                                                                    NTS QA Assistant
                                                                 </span>
                                                             </p>
                                                             <p className="text-xs" data-description>
-                                                                The most powerful model for complex computations.
+                                                                Ask Qualy - "Can you check out the MC number for any violations?"
                                                             </p>
                                                         </div>
                                                     </div>
