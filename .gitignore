@@ -34,3 +34,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore virtual environments
+venv/
+__pycache__/
+
+# Ignore environment files
+.env
+
+# Ignore results and temporary files
+fine-tuned-model/
+fine-tuning/
+results/
+serve_model.py
