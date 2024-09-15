@@ -99,8 +99,10 @@ const DimensionSearch: React.FC = () => {
 
     return (
         <div className="p-4 flex flex-col justify-center items-center">
-            <h1 className="text-2xl font-bold mb-4 text-center">Equipment Dimension Search</h1>
-            <div className='flex gap-4'>
+            <h1 className="text-2xl font-bold mb-4 text-center">Equipment Dimension Search/Directory</h1>
+            <h2 className="text-xl font-medium mb-4 text-center">More comprehensive data (wheelbase, track lengths, illustrations/images (not as soon), etc.) coming soon. As always - just as if you're looking up dimensions from another during a google search, it is always better to ask the client for dimensions/images. <br /><br /> The current dimensions provided is surface leveled (current source - pulled from \/er1-tread) - so the dimensions are the "shipping heights, width, length, and weight" - I have been scraping data lately straight from the manufacturers - so more data coming soon.</h2>
+            <p className='flex gap-2'><strong>Disclaimer:</strong> to say this nicely- you wouldn't be calling ritchie or lectura for inaccurate information asking them to cover losses on your rip. It's always better to get the dimensions from the shipper regardless of your resources.</p>
+            <div className='flex gap-4 mt-12'>
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <div className="relative mb-4 w-full">
@@ -110,7 +112,7 @@ const DimensionSearch: React.FC = () => {
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
                                 placeholder="Select Manufacturer"
-                                className="pl-10"
+                                className="pl-10 bg-muted-200"
                             />
                         </div>
                     </DropdownMenuTrigger>

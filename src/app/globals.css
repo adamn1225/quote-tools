@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  @apply bg-stone-200;
   --foreground: #171717;
 }
 
@@ -68,4 +68,11 @@ p, h1, h2, h3, h4, h5, h6, a, li, span, button, div, input, textarea {
 
 .dark-button:hover {
   @apply bg-gray-900;
+}
+
+input {
+  @apply bg-muted !important; 
+  @apply text-gray-900;
+  @apply border-2 !important;
+  @apply border-gray-900 !important;
 }

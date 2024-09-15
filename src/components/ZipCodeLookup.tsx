@@ -5,11 +5,13 @@ import { Input } from "@/components/ui/input";
 
 
 const ZipCodeLookup: React.FC = () => {
-    const [origin, setOrigin] = useState<string>('');
-    const [destination, setDestination] = useState<string>('');
-    const [originInfo, setOriginInfo] = useState<string>('');
-    const [destinationInfo, setDestinationInfo] = useState<string>('');
-    const [distanceInfo, setDistanceInfo] = useState<string>('');
+    const [origin, setOrigin] = useState('');
+    const [destination, setDestination] = useState('');
+    const [originInfo, setOriginInfo] = useState('');
+    const [destinationInfo, setDestinationInfo] = useState('');
+    const [distanceInfo, setDistanceInfo] = useState('');
+    const [originLatLng, setOriginLatLng] = useState<{ lat: number, lng: number } | null>(null);
+    const [destinationLatLng, setDestinationLatLng] = useState<{ lat: number, lng: number } | null>(null);
 
     const lookupZipCode = async (type: 'origin' | 'destination') => {
         const zipCode = type === 'origin' ? origin : destination;
@@ -22,14 +24,22 @@ const ZipCodeLookup: React.FC = () => {
             }
             const data = await response.json();
             const info = `
-            <p>Country: ${data.country}</p>
-            <p>State: ${data.places[0]['state']}</p>
-            <p>City: ${data.places[0]['place name']}</p>
-        `;
+                <p>Country: ${data.country}</p>
+                <p>State: ${data.places[0]['state']}</p>
+                <p>City: ${data.places[0]['place name']}</p>
+                <p>Latitude: ${data.places[0]['latitude']}</p>
+                <p>Longitude: ${data.places[0]['longitude']}</p>
+            `;
+            const latLng = {
+                lat: parseFloat(data.places[0]['latitude']),
+                lng: parseFloat(data.places[0]['longitude']),
+            };
             if (type === 'origin') {
                 setOriginInfo(info);
+                setOriginLatLng(latLng);
             } else {
                 setDestinationInfo(info);
+                setDestinationLatLng(latLng);
             }
         } catch (error) {
             const errorMessage = `<p>Error: ${(error as Error).message}</p>`;
@@ -41,24 +51,18 @@ const ZipCodeLookup: React.FC = () => {
         }
     };
 
+    const toRadians = (degrees: number) => {
+        return degrees * (Math.PI / 180);
+    };
+
     const calculateDistance = () => {
-        const originLatElement = document.getElementById('originLat') as HTMLInputElement | null;
-        const originLngElement = document.getElementById('originLng') as HTMLInputElement | null;
-        const destinationLatElement = document.getElementById('destinationLat') as HTMLInputElement | null;
-        const destinationLngElement = document.getElementById('destinationLng') as HTMLInputElement | null;
-
-        const originLat = parseFloat(originLatElement?.value ?? '');
-        const originLng = parseFloat(originLngElement?.value ?? '');
-        const destinationLat = parseFloat(destinationLatElement?.value ?? '');
-        const destinationLng = parseFloat(destinationLngElement?.value ?? '');
-
-        if (isNaN(originLat) || isNaN(originLng) || isNaN(destinationLat) || isNaN(destinationLng)) {
-            const distanceInfoElement = document.getElementById('distanceInfo');
-            if (distanceInfoElement) {
-                distanceInfoElement.innerHTML = '<p>Please lookup both ZIP codes first.</p>';
-            }
+        if (!originLatLng || !destinationLatLng) {
+            setDistanceInfo('<p>Please lookup both ZIP codes first.</p>');
             return;
         }
+
+        const { lat: originLat, lng: originLng } = originLatLng;
+        const { lat: destinationLat, lng: destinationLng } = destinationLatLng;
 
         const R = 6371; // Radius of the Earth in kilometers
         const dLat = toRadians(destinationLat - originLat);
@@ -70,35 +74,34 @@ const ZipCodeLookup: React.FC = () => {
         const distanceKm = R * c; // Distance in kilometers
         const distanceMiles = distanceKm * 0.621371; // Convert kilometers to miles
 
-        const distanceInfoElement = document.getElementById('distanceInfo');
-        if (distanceInfoElement) {
-            distanceInfoElement.innerHTML = `<p>Distance: ${distanceKm.toFixed(2)} km (${distanceMiles.toFixed(2)} miles)</p>`;
-        }
-    };
-
-    const toRadians = (degrees: number) => {
-        return degrees * (Math.PI / 180);
+        setDistanceInfo(`<p> ${distanceKm.toFixed(2)} km (${distanceMiles.toFixed(2)} miles)</p>`);
     };
 
     return (
-        <div>
-            <div style={{ display: 'flex', gap: '20px', justifyContent: 'start', alignItems: 'start' }}>
-                <div className='flex flex-col gap-2'>
-                    <h2 className='font-bold'>Origin ZIP Code Lookup</h2>
-                    <Input type="text" id="origin" value={origin} onChange={(e) => setOrigin(e.target.value)} placeholder="Enter Origin ZIP Code" />
-                    <Button className='dark-button' onClick={() => lookupZipCode('origin')}>Lookup Origin</Button>
-                    <div dangerouslySetInnerHTML={{ __html: originInfo }}></div>
+        <div className='flex flex-col justify-center items-center text-center w-2/3 mb-20'>
+            <h2><strong className='text-2xl'>PLEASE READ:</strong> </h2><h3 className='font-medium text-md'>The miles calculation tool is only displayed here for visual concept. <br />The miles search uses what is called the Haversine Formula which takes both coordinates from each inputted zip code and gives the range of miles in a <strong>straight line</strong>, meaning it does not consider any obstacles such as roads, mountains, route options, etc, as if the carrier will be busting through trees and mountains to get to it's final destination. Only Google Maps API is capable of giving the accurate miles with roads in consideration - which will be implemented hopefully soon ($$$ &#128579;).</h3><br />
+            <h4 className='text-md'>I did test some routes in comparison and noticed Haversine's formula was off by 200 miles on all routes I've tested, but this by no means should be used to calculate the full files to determine your quote - circling back to the begining of this disclaimer, this was purely implemented as a visual concept - the zip code results are still accurate!</h4><br />
+            <p><strong>Disclaimer:</strong> if you did not read this and used these miles to calculate your shipping rates - do not come to me asking me to cover any loss in in result of not reading what I took the time to write above - I even said please.</p>
+            <div className='border border-slate-950 border-spacing-9, px-20 pb-20 mt-5'>
+                <div style={{ display: 'flex', gap: '20px', justifyContent: 'start', alignItems: 'start', marginTop: '14px', }}>
+    
+                    <div className='flex flex-col gap-2'>
+                        <h2 className='font-bold'>Origin ZIP Code Lookup</h2>
+                        <Input type="text" id="origin" value={origin} onChange={(e) => setOrigin(e.target.value)} placeholder="Enter Origin ZIP Code" />
+                        <Button className='dark-button' onClick={() => lookupZipCode('origin')}>Lookup Origin</Button>
+                        <div dangerouslySetInnerHTML={{ __html: originInfo }}></div>
+                    </div>
+                    <div className='flex flex-col gap-2'>
+                        <h2 className='font-bold'>Destination ZIP Code Lookup</h2>
+                        <Input type="text" id="destination" value={destination} onChange={(e) => setDestination(e.target.value)} placeholder="Enter Destination ZIP Code" />
+                        <Button className='dark-button' onClick={() => lookupZipCode('destination')}>Lookup Destination</Button>
+                        <div dangerouslySetInnerHTML={{ __html: destinationInfo }}></div>
+                    </div>
                 </div>
-                <div className='flex flex-col gap-2'>
-                    <h2 className='font-bold'>Destination ZIP Code Lookup</h2>
-                    <Input type="text" id="destination" value={destination} onChange={(e) => setDestination(e.target.value)} placeholder="Enter Destination ZIP Code" />
-                    <Button className='dark-button' onClick={() => lookupZipCode('destination')}>Lookup Destination</Button>
-                    <div dangerouslySetInnerHTML={{ __html: destinationInfo }}></div>
+                <div style={{ gap: '5px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '75px' }}>
+                    <Button className='dark-button' onClick={calculateDistance}>Calculate Distance</Button>
+                    <p className="flex gap-2"><span className='font-bold text-md'>Distance:</span><div dangerouslySetInnerHTML={{ __html: distanceInfo }}></div></p>
                 </div>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '75px' }}>
-                <Button className='dark-button' onClick={calculateDistance}>Calculate Distance</Button>
-                <div dangerouslySetInnerHTML={{ __html: distanceInfo }}></div>
             </div>
         </div>
     );
