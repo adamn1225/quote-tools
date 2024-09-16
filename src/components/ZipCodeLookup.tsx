@@ -79,9 +79,8 @@ const ZipCodeLookup: React.FC = () => {
 
     return (
         <div className='flex flex-col justify-center items-center text-center w-2/3 mb-20'>
-            <h2><strong className='text-2xl'>PLEASE READ:</strong> </h2><h3 className='font-medium text-md'>The miles calculation tool is only displayed here for visual concept. <br />The miles search uses what is called the Haversine Formula which takes both coordinates from each inputted zip code and gives the range of miles in a <strong>straight line</strong>, meaning it does not consider any obstacles such as roads, mountains, route options, etc, as if the carrier will be busting through trees and mountains to get to it's final destination. Only Google Maps API is capable of giving the accurate miles with roads in consideration - which will be implemented hopefully soon ($$$ &#128579;).</h3><br />
-            <h4 className='text-md'>I did test some routes in comparison and noticed Haversine's formula was off by 200 miles on all routes I've tested, but this by no means should be used to calculate the full files to determine your quote - circling back to the begining of this disclaimer, this was purely implemented as a visual concept - the zip code results are still accurate!</h4><br />
-            <p><strong>Disclaimer:</strong> if you did not read this and used these miles to calculate your shipping rates - do not come to me asking me to cover any loss in in result of not reading what I took the time to write above - I even said please.</p>
+            <h2><strong className='text-2xl'>PLEASE READ:</strong> </h2><h3 className='font-medium text-md'>The miles calculation tool is only displayed here for visual concept. <br />The miles search gives the range of miles in a <strong>straight line</strong>, meaning it does not consider any obstacles such as roads, mountains, route options, etc. Google Maps is capable of giving the accurate miles with roads in consideration - which will be implemented hopefully soon.</h3><br />
+    
             <div className='border border-slate-950 border-spacing-9, px-20 pb-20 mt-5'>
                 <div style={{ display: 'flex', gap: '20px', justifyContent: 'start', alignItems: 'start', marginTop: '14px', }}>
     
