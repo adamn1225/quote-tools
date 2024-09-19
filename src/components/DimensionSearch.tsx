@@ -24,6 +24,7 @@ interface Excavator {
     "Manufacturer/Model": string;
     Weight: string;
     dimensions: Dimensions;
+    [key: string]: any; // Allow for additional properties
 }
 
 const DimensionSearch: React.FC = () => {
@@ -60,7 +61,7 @@ const DimensionSearch: React.FC = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('/api/search');
+                const response = await axios.get('/api/merged-data');
                 console.log('Fetched data:', response.data); // Debugging: Log fetched data
                 setData(response.data);
             } catch (error) {
@@ -72,15 +73,17 @@ const DimensionSearch: React.FC = () => {
 
     const handleSearch = () => {
         const filteredData = selectedManufacturer
-            ? data.filter(item => item["Manufacturer/Model"].toLowerCase().includes(selectedManufacturer.toLowerCase()))
+            ? data.filter(item => item["Manufacturer/Model"]?.toLowerCase().includes(selectedManufacturer.toLowerCase()))
             : data;
 
         console.log('Filtered data:', filteredData); // Debugging: Log filtered data
 
         const fuse = new Fuse(filteredData, {
-            keys: ['Manufacturer/Model'],
+            keys: ['Manufacturer/Model', 'dimensions.Length', 'dimensions.Width', 'dimensions.Height'],
             threshold: 0.3, // Adjust the threshold for more or less fuzzy matching
+            includeScore: true,
         });
+
         const result = fuse.search(query);
         console.log('Search results:', result); // Debugging: Log search results
         setResults(result.map(r => r.item));
@@ -152,12 +155,11 @@ const DimensionSearch: React.FC = () => {
                         </div>
                         {expandedIndex === index && (
                             <div className="flex flex-col gap-1 ">
-                                <li className="font-bold">Weight: {result.Weight}</li>
-                                <ul>
-                                    <li>Length: {result.dimensions.Length}</li>
-                                    <li>Width: {Array.isArray(result.dimensions.Width) ? result.dimensions.Width.join(', ') : result.dimensions.Width}</li>
-                                    <li>Height: {result.dimensions.Height}</li>
-                                </ul>
+                                {Object.entries(result).map(([key, value]) => (
+                                    <div key={key}>
+                                        <strong>{key}:</strong> {typeof value === 'object' ? JSON.stringify(value) : value}
+                                    </div>
+                                ))}
                             </div>
                         )}
                     </div>

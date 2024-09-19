@@ -5,7 +5,7 @@ import TonsToLbs from '@/components/TonsToLbs';
 import MetersToFeetInchesConverter from '@/components/MetersToFeetInchesConverter';
 import MmToFeetInchesConverter from '@/components/MmToFeetInchesConverter';
 import Aside from '@/components/Aside';
-
+import InsuranceCalc from '@/components/InsuranceCalc';
 const Calculators: React.FC = () => {
     return (
         <div className="flex flex-col gap-2 h-screen justify-items-center items-start w-full pl-[53px]">
@@ -19,6 +19,7 @@ const Calculators: React.FC = () => {
                     <TonsToLbs />
                     <MetersToFeetInchesConverter />
                     <MmToFeetInchesConverter />
+                    <InsuranceCalc />
                </div>
             </div>
             <div className="flex items-center justify-center w-full pt-12 mt-6 border-t-2 border-slate-950 mb-24">
