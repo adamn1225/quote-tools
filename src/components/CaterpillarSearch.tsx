@@ -14,22 +14,19 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Search } from 'lucide-react';
 
-interface Dimensions {
-    Length: string;
-    Width: string | string[];
-    Height: string;
+interface EquipmentSpecs {
+    [key: string]: any; // Allow for additional properties
 }
 
-interface Excavator {
-    "Manufacturer/Model": string;
-    Weight: string;
-    dimensions: Dimensions;
+interface CombinedData {
+    model: string;
+    data: EquipmentSpecs; // Adjust as needed
 }
 
-const DimensionSearch: React.FC = () => {
+const CaterpillarSearch: React.FC = () => {
     const [query, setQuery] = useState('');
-    const [results, setResults] = useState<Excavator[]>([]);
-    const [data, setData] = useState<Excavator[]>([]);
+    const [results, setResults] = useState<CombinedData[]>([]);
+    const [data, setData] = useState<CombinedData[]>([]);
     const [selectedManufacturer, setSelectedManufacturer] = useState('');
     const [inputValue, setInputValue] = useState('');
     const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
@@ -60,9 +57,15 @@ const DimensionSearch: React.FC = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('/api/search');
+                const response = await axios.get('/api/caterpillar-equipment-specs');
                 console.log('Fetched data:', response.data); // Debugging: Log fetched data
-                setData(response.data);
+
+                // Ensure the response data is an array
+                if (Array.isArray(response.data)) {
+                    setData(response.data);
+                } else {
+                    console.error('API response is not an array:', response.data);
+                }
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -72,15 +75,20 @@ const DimensionSearch: React.FC = () => {
 
     const handleSearch = () => {
         const filteredData = selectedManufacturer
-            ? data.filter(item => item["Manufacturer/Model"].toLowerCase().includes(selectedManufacturer.toLowerCase()))
+            ? data.filter(item => item.model && item.model.toLowerCase().includes(selectedManufacturer.toLowerCase()))
             : data;
 
         console.log('Filtered data:', filteredData); // Debugging: Log filtered data
 
+        // Create a list of keys to search through, including all keys in the data
+        const keys = ['model', ...Object.keys(filteredData[0]?.data || {}).map(key => `data.${key}`)];
+
         const fuse = new Fuse(filteredData, {
-            keys: ['Manufacturer/Model'],
+            keys,
             threshold: 0.3, // Adjust the threshold for more or less fuzzy matching
+            includeScore: true,
         });
+
         const result = fuse.search(query);
         console.log('Search results:', result); // Debugging: Log search results
         setResults(result.map(r => r.item));
@@ -98,21 +106,23 @@ const DimensionSearch: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center">
-            <h1 className="text-2xl font-bold mb-4 text-center">Equipment Dimension Search/Directory</h1>
-            <h2 className="text-lg font-bold text-center w-1/2 mb-4">More comprehensive data (wheelbase, track lengths, illustrations/images (not as soon), etc.) coming soon. As always - just as if you're looking up dimensions from another during a google search, it is always better to ask the client for dimensions/images.</h2>
-            <div className='flex gap-4 w-full justify-center'>
+        <div className="p-4 flex flex-col justify-center items-center">
+            <h1 className="text-2xl font-bold mb-1 text-center">Caterpillar Equipment Search</h1>
+            <h2 className="text-lg font-bold text-center w-1/2">Component will currently only pull full specifications for caterpillar
+                - I left this here as a visual as I work ok organize the data gathered to display properly - but the data from cat is accurate.
+            </h2>
+            <div className='flex gap-4 mt-6'>
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        <div className="relative mb-4 w-1/4">
+                        <div className="relative mb-4 w-full">
                             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-stone-950" />
                             <Input
                                 type="text"
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
                                 placeholder="Select Manufacturer"
-                                className="pl-10"
-                                />
+                                className="pl-10 bg-muted-200"
+                            />
                         </div>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="max-h-60 overflow-y-auto">
@@ -130,38 +140,33 @@ const DimensionSearch: React.FC = () => {
                         ))}
                     </DropdownMenuContent>
                 </DropdownMenu>
-                <div className='w-1/4'>
-                    
-                    <Input
-                        type="text"
-                        value={query}
-                        onChange={(e) => setQuery(e.target.value)}
-                        placeholder="Search dimensions..."
-                        className="mb-4"
-                        />
-                        
-                </div>
+                <Input
+                    type="text"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    placeholder="Search specifications..."
+                    className="mb-4"
+                />
             </div>
             <div className="flex gap-4 mb-4 justify-center">
-                <Button onClick={handleSearch}>Search</Button>
-                <Button onClick={handleClearSearch} variant="outline">Clear</Button>
+                <Button className='dark-button hover:bg-gray-800' onClick={handleSearch}>Search</Button>
+                <Button className='dark-button' onClick={handleClearSearch} variant="outline">Clear</Button>
             </div>
             <ul className="flex flex-col justify-center items-center gap-4 w-full">
                 {results.map((result, index) => (
                     <div key={index} className='flex flex-col gap-4 w-2/3 justify-evenly items-center bg-stone-50 border border-gray-800 p-4 h-auto'>
                         <div className='grid grid-cols-1 justify-items-start'>
-                            <li className="font-bold cursor-pointer  border-b border-gray-500" onClick={() => toggleExpand(index)}>
-                                {result["Manufacturer/Model"]}
+                            <li className="font-bold cursor-pointer" onClick={() => toggleExpand(index)}>
+                                {result.model}
                             </li>
                         </div>
                         {expandedIndex === index && (
-                            <div className="flex flex-col gap-1 ">
-                                <li className="font-bold border-b border-gray-400">Weight: {result.Weight}</li>
-                                <ul>
-                                    <li className='border-b border-gray-400'>Length: {result.dimensions.Length}</li>
-                                    <li className='border-b border-gray-400'>Width: {Array.isArray(result.dimensions.Width) ? result.dimensions.Width.join(', ') : result.dimensions.Width}</li>
-                                    <li className='border-b border-gray-400'>Height: {result.dimensions.Height}</li>
-                                </ul>
+                            <div className="flex flex-col gap-1">
+                                {Object.entries(result.data).map(([key, value], idx, arr) => (
+                                    <div key={key} className={`pb-2 ${idx !== arr.length - 1 ? 'border-b border-gray-500' : ''}`}>
+                                        <strong>{key}:</strong> {typeof value === 'object' && value !== null ? JSON.stringify(value) : String(value)}
+                                    </div>
+                                ))}
                             </div>
                         )}
                     </div>
@@ -171,4 +176,4 @@ const DimensionSearch: React.FC = () => {
     );
 };
 
-export default DimensionSearch;
+export default CaterpillarSearch;
