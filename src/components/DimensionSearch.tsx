@@ -24,7 +24,6 @@ interface Excavator {
     "Manufacturer/Model": string;
     Weight: string;
     dimensions: Dimensions;
-    [key: string]: any; // Allow for additional properties
 }
 
 const DimensionSearch: React.FC = () => {
@@ -61,7 +60,7 @@ const DimensionSearch: React.FC = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('/api/merged-data');
+                const response = await axios.get('/api/search');
                 console.log('Fetched data:', response.data); // Debugging: Log fetched data
                 setData(response.data);
             } catch (error) {
@@ -73,17 +72,15 @@ const DimensionSearch: React.FC = () => {
 
     const handleSearch = () => {
         const filteredData = selectedManufacturer
-            ? data.filter(item => item["Manufacturer/Model"]?.toLowerCase().includes(selectedManufacturer.toLowerCase()))
+            ? data.filter(item => item["Manufacturer/Model"].toLowerCase().includes(selectedManufacturer.toLowerCase()))
             : data;
 
         console.log('Filtered data:', filteredData); // Debugging: Log filtered data
 
         const fuse = new Fuse(filteredData, {
-            keys: ['Manufacturer/Model', 'dimensions.Length', 'dimensions.Width', 'dimensions.Height'],
+            keys: ['Manufacturer/Model'],
             threshold: 0.3, // Adjust the threshold for more or less fuzzy matching
-            includeScore: true,
         });
-
         const result = fuse.search(query);
         console.log('Search results:', result); // Debugging: Log search results
         setResults(result.map(r => r.item));
@@ -101,21 +98,21 @@ const DimensionSearch: React.FC = () => {
     };
 
     return (
-        <div className="p-4 flex flex-col justify-center items-center">
+        <div className="p-4 flex flex-col justify-center">
             <h1 className="text-2xl font-bold mb-4 text-center">Equipment Dimension Search/Directory</h1>
             <h2 className="text-xl font-medium mb-4 text-center">More comprehensive data (wheelbase, track lengths, illustrations/images (not as soon), etc.) coming soon. As always - just as if you're looking up dimensions from another during a google search, it is always better to ask the client for dimensions/images.</h2>
-            <div className='flex gap-4 mt-12'>
+            <div className='flex gap-4 w-full justify-center'>
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        <div className="relative mb-4 w-full">
+                        <div className="relative mb-4 w-1/4">
                             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-stone-950" />
                             <Input
                                 type="text"
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
                                 placeholder="Select Manufacturer"
-                                className="pl-10 bg-muted-200"
-                            />
+                                className="pl-10"
+                                />
                         </div>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="max-h-60 overflow-y-auto">
@@ -133,19 +130,23 @@ const DimensionSearch: React.FC = () => {
                         ))}
                     </DropdownMenuContent>
                 </DropdownMenu>
-                <Input
-                    type="text"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search dimensions..."
-                    className="mb-4"
-                />
+                <div className='w-1/4'>
+                    
+                    <Input
+                        type="text"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                        placeholder="Search dimensions..."
+                        className="mb-4"
+                        />
+                        
+                </div>
             </div>
             <div className="flex gap-4 mb-4 justify-center">
-                <Button className='dark-button hover:bg-gray-800' onClick={handleSearch}>Search</Button>
-                <Button className='dark-button' onClick={handleClearSearch} variant="outline">Clear</Button>
+                <Button onClick={handleSearch}>Search</Button>
+                <Button onClick={handleClearSearch} variant="outline">Clear</Button>
             </div>
-            <ul className="flex flex-wrap justify-evenly gap-4 w-2/3">
+            <ul className="flex flex-wrap justify-evenly gap-4">
                 {results.map((result, index) => (
                     <div key={index} className='flex flex-col text-center justify-evenly items-center border p-4 max-w-[300px] min-w-[300px] h-auto'>
                         <div className='grid grid-rows-2 justify-items-start'>
@@ -155,11 +156,12 @@ const DimensionSearch: React.FC = () => {
                         </div>
                         {expandedIndex === index && (
                             <div className="flex flex-col gap-1 ">
-                                {Object.entries(result).map(([key, value]) => (
-                                    <div key={key}>
-                                        <strong>{key}:</strong> {typeof value === 'object' ? JSON.stringify(value) : value}
-                                    </div>
-                                ))}
+                                <li className="font-bold">Weight: {result.Weight}</li>
+                                <ul>
+                                    <li>Length: {result.dimensions.Length}</li>
+                                    <li>Width: {Array.isArray(result.dimensions.Width) ? result.dimensions.Width.join(', ') : result.dimensions.Width}</li>
+                                    <li>Height: {result.dimensions.Height}</li>
+                                </ul>
                             </div>
                         )}
                     </div>

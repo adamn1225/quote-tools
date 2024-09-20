@@ -71,7 +71,7 @@ p, h1, h2, h3, h4, h5, h6, a, li, span, button, div, input, textarea {
 }
 
 input {
-  @apply bg-muted !important; 
+  @apply bg-white !important; 
   @apply text-gray-900;
   @apply border-2 !important;
   @apply border-gray-900 !important;

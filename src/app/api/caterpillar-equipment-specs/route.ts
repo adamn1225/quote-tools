@@ -4,7 +4,7 @@ import path from 'path';
 
 export async function GET(req: NextRequest) {
     try {
-        const jsonFilePath = path.join(process.cwd(), 'public', 'caterpillar_equipment_specs.json');
+        const jsonFilePath = path.join(process.cwd(), 'public', 'caterpillar-equipment-specs.json');
         const jsonData = await fs.readFile(jsonFilePath, 'utf-8');
         const data: { [key: string]: any } = JSON.parse(jsonData);
 
