@@ -96,14 +96,14 @@ function Aside() {
 
                         <Tooltip>
                             <TooltipTrigger asChild>
-                                <Link href="/settings">
+                                <Link href="/equipment-market">
                                     <Button
                                         variant="ghost"
                                         className="rounded-lg h-12 flex justify-start w-full items-center bg-white gap-1"
                                         aria-label="Settings"
                                     >
                                         <NotebookText className="size-5" />
-                                        <span className='text-xs text-justify'>CARRIER SEARCH<br />(coming soon)</span>
+                                        <span className='text-xs text-justify'>EQUIPMENT MARKET SEARCH</span>
                                     </Button>
                                 </Link>
                             </TooltipTrigger>
